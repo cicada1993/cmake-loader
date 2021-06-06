@@ -1,4 +1,6 @@
 # cmake-loader
+整合基于cmake的c++项目和前端项目，支持webassembly开发
+
 - this is a tool for webpack
 - you can compile a wasm module from an cmake project with emscripten
 
