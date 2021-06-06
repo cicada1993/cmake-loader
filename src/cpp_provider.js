@@ -3,7 +3,11 @@ let cppTest
 async function loadCppTest() {
     if (!cppTest) {
         const cppTestESM = await import("../cpptest")
-        cppTest = await cppTestESM.default()
+        if (typeof cppTestESM.default == "function") {
+            cppTest = await cppTestESM.default()
+        } else {
+            cppTest = await cppTestESM.default
+        }
     }
     return cppTest
 }

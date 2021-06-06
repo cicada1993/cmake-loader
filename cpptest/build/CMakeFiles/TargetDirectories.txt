@@ -1,3 +1,3 @@
-F:/QdProjs/cside-loader/cpptest/build/CMakeFiles/cpptest.dir
-F:/QdProjs/cside-loader/cpptest/build/CMakeFiles/edit_cache.dir
-F:/QdProjs/cside-loader/cpptest/build/CMakeFiles/rebuild_cache.dir
+F:/QdProjs/cmake-loader/cpptest/build/CMakeFiles/cpptest.dir
+F:/QdProjs/cmake-loader/cpptest/build/CMakeFiles/edit_cache.dir
+F:/QdProjs/cmake-loader/cpptest/build/CMakeFiles/rebuild_cache.dir

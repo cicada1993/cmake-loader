@@ -1,6 +1,6 @@
 {
   "name": "cmake-loader",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "find and build cmake module,espacially wasm module",
   "main": "./dist/cmake-loader.common.js",
   "scripts": {

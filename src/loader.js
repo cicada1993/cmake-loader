@@ -57,10 +57,10 @@ module.exports = function (source) {
         emsdk: loaderOpt.emsdk
     }
     if (cppOpt.favor == 'wasm' && cppOpt.cache && fs.existsSync(wasmPath)) {
-        console.log('cside-loader', 'hit cache result')
+        console.log('cmake-loader', 'hit cache result')
         handleRet()
     } else {
-        console.log('cside-loader', 'compiling cmake project')
+        console.log('cmake-loader', 'compiling cmake project')
         // 构建配置
         cmakeBuild(cppBuildConfig, (res) => {
             handleRet()

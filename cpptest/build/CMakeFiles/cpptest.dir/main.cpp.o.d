@@ -1,5 +1,5 @@
 CMakeFiles/cpptest.dir/main.cpp.o: \
-  F:\QdProjs\cside-loader\cpptest\main.cpp \
+  F:\QdProjs\cmake-loader\cpptest\main.cpp \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\iostream \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__config \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\pthread.h \

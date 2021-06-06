@@ -85,7 +85,8 @@ function cmakeBuild({ dir, favor, emsdk = {} } = {}, resolve = () => { }) {
     let emsdk_dir = path.normalize(emsdk[process.platform])
     let emsdk_env
     let env_shell
-    if (process.platform == "win32") {
+    let isWin = process.platform == "win32"
+    if (isWin) {
         emsdk_env = path.join(emsdk_dir, "emsdk_env.bat")
         // windows下 需要手动执行脚本获取临时环境
         env_shell = `${pathForCmd(emsdk_env)} &&`
@@ -98,8 +99,9 @@ function cmakeBuild({ dir, favor, emsdk = {} } = {}, resolve = () => { }) {
         // 构建wasm模块
         buildCommand = `${env_shell} cd build && emcmake cmake .. && cmake --build .`
     } else {
-        // 普通cpp编译
-        buildCommand = `cd build && cmake -G "MinGW Makefiles" .. && cmake --build .`
+        // 普通cpp编译 use mingw-gcc compile c files on windows
+        let buildExt = isWin ? '-G "MinGW Makefiles"' : ''
+        buildCommand = `cd build && cmake ${buildExt} .. && cmake --build .`
     }
     console.log(_brand('build command'), _info(buildCommand))
     const buildProcess = spawn(buildCommand, { shell: true, cwd: dir });
