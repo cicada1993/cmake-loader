@@ -1,5 +1,5 @@
 # cmake-loader
-整合基于cmake的c++项目和前端项目，支持webassembly开发
+整合基于cmake的c++项目和前端项目，支持webassembly开发，支持windows、linux
 
 - this is a tool for webpack
 - you can compile a wasm module from an cmake project with emscripten
@@ -8,6 +8,7 @@
 
 ## requirements
 - windows or linux
+- mingw gcc on windows / gcc on linux
 - cmake
 - emscripten
 ## install
