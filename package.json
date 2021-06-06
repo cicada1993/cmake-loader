@@ -1,0 +1,40 @@
+{
+  "name": "cmake-loader",
+  "version": "0.1.1",
+  "description": "find and build cmake module,espacially wasm module",
+  "main": "./dist/cmake-loader.common.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack serve",
+    "build": "cross-env NODE_ENV=production webpack",
+    "lib": "cross-env NODE_ENV=production webpack --config lib.build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cicada1993/cmake-loader"
+  },
+  "bugs": {
+    "url": "https://github.com/cicada1993/cmake-loader/issues"
+  },
+  "homepage": "https://github.com/cicada1993/cmake-loader",
+  "keywords": [
+    "wasm",
+    "webassembly",
+    "cmake",
+    "cmake-loader",
+    "c++"
+  ],
+  "author": "ttjbs<2497781917@qq.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "html-webpack-plugin": "^5.3.1",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "loader-utils": "^2.0.0"
+  }
+}
