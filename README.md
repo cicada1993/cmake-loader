@@ -1,6 +1,9 @@
 # cmake-loader
 - this is a tool for webpack
 - you can compile a wasm module from an cmake project with emscripten
+
+![image](https://user-images.githubusercontent.com/31173307/120924480-8af56000-c706-11eb-9116-fab18d01b909.png)
+
 ## requirements
 - windows or linux
 - cmake
