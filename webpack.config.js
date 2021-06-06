@@ -30,8 +30,7 @@ module.exports =
                         emsdk: {
                             win32: "D:\\emsdk",
                             linux: "/home/kotlinrust/Apps/emsdk"
-                        },
-                        cache: true
+                        }
                     }
                 }
             },
