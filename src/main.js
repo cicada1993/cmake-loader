@@ -1,7 +1,13 @@
-import { loadCppTest } from "./cpp_provider";
+import { loadCppTest } from "./wasmer";
 
 loadCppTest().then(
     (cppTest) => {
-        console.log('cpp module', cppTest)
+        let { cppOpt, wasmer } = cppTest
+        console.log('cppOpt', cppOpt)
+        return wasmer()
+    }
+).then(
+    (wasm) => {
+        console.log('wasm', wasm)
     }
 )

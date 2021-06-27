@@ -7,10 +7,15 @@ CMakeFiles/cpptest.dir/main.cpp.o: \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\iosfwd \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\compat\wchar.h \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\wchar.h \
+  D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\stddef.h \
+  D:\emsdk\upstream\lib\clang\13.0.0\include\stddef.h \
+  D:\emsdk\upstream\lib\clang\13.0.0\include\__stddef_max_align_t.h \
+  D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__nullptr \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\wchar.h \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\features.h \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\bits\alltypes.h \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__locale \
+  D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__availability \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\string \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\string_view \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__string \
@@ -18,9 +23,6 @@ CMakeFiles/cpptest.dir/main.cpp.o: \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\initializer_list \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\cstddef \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\version \
-  D:\emsdk\upstream\lib\clang\13.0.0\include\stddef.h \
-  D:\emsdk\upstream\lib\clang\13.0.0\include\__stddef_max_align_t.h \
-  D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__nullptr \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\type_traits \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\cstring \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\compat\string.h \
@@ -38,29 +40,48 @@ CMakeFiles/cpptest.dir/main.cpp.o: \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\memory \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\typeinfo \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\exception \
+  D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__memory\base.h \
+  D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__undef_macros \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\cstdlib \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\compat\stdlib.h \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\stdlib.h \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\stdlib.h \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\alloca.h \
-  D:\emsdk\upstream\emscripten\cache\sysroot\include\compat\math.h \
-  D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\math.h \
-  D:\emsdk\upstream\emscripten\cache\sysroot\include\math.h \
-  D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\limits \
-  D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__undef_macros \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\new \
+  D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\limits \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\iterator \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__functional_base \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\tuple \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\stdexcept \
+  D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__memory\allocator_traits.h \
+  D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__memory\pointer_traits.h \
+  D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__memory\utilities.h \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\atomic \
+  D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__threading_support \
+  D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\chrono \
+  D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\ctime \
+  D:\emsdk\upstream\emscripten\cache\sysroot\include\compat\time.h \
+  D:\emsdk\upstream\emscripten\cache\sysroot\include\time.h \
+  D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\ratio \
+  D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\climits \
+  D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\limits.h \
+  D:\emsdk\upstream\lib\clang\13.0.0\include\limits.h \
+  D:\emsdk\upstream\emscripten\cache\sysroot\include\limits.h \
+  D:\emsdk\upstream\emscripten\cache\sysroot\include\bits\limits.h \
+  D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\errno.h \
+  D:\emsdk\upstream\emscripten\cache\sysroot\include\errno.h \
+  D:\emsdk\upstream\emscripten\cache\sysroot\include\bits\errno.h \
+  D:\emsdk\upstream\emscripten\cache\sysroot\include\wasi\api.h \
+  D:\emsdk\upstream\emscripten\cache\sysroot\include\sched.h \
+  D:\emsdk\upstream\emscripten\cache\sysroot\include\semaphore.h \
+  D:\emsdk\upstream\emscripten\cache\sysroot\include\fcntl.h \
+  D:\emsdk\upstream\emscripten\cache\sysroot\include\bits\fcntl.h \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\functional \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\bit \
+  D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__bits \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\cstdio \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\stdio.h \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\stdio.h \
-  D:\emsdk\upstream\emscripten\cache\sysroot\include\wasi\api.h \
-  D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\stddef.h \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\cwchar \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\cwctype \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\cctype \
@@ -72,24 +93,9 @@ CMakeFiles/cpptest.dir/main.cpp.o: \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\wctype.h \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\mutex \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__mutex_base \
-  D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\chrono \
-  D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\ctime \
-  D:\emsdk\upstream\emscripten\cache\sysroot\include\compat\time.h \
-  D:\emsdk\upstream\emscripten\cache\sysroot\include\time.h \
-  D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\ratio \
-  D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\climits \
-  D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\limits.h \
-  D:\emsdk\upstream\lib\clang\13.0.0\include\limits.h \
-  D:\emsdk\upstream\emscripten\cache\sysroot\include\limits.h \
-  D:\emsdk\upstream\emscripten\cache\sysroot\include\bits\limits.h \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\system_error \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__errc \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\cerrno \
-  D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\errno.h \
-  D:\emsdk\upstream\emscripten\cache\sysroot\include\errno.h \
-  D:\emsdk\upstream\emscripten\cache\sysroot\include\bits\errno.h \
-  D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\__threading_support \
-  D:\emsdk\upstream\emscripten\cache\sysroot\include\sched.h \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\c++\v1\locale.h \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\locale.h \
   D:\emsdk\upstream\emscripten\cache\sysroot\include\compat\xlocale.h \

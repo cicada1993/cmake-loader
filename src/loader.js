@@ -39,14 +39,14 @@ module.exports = function (source) {
                 this.emitFile(`${fileName}.wasm`, data)
             })
             // return created code
-            let genCode =
-                `import * as ${fileName} from './build/${fileName}.js'
-            export default ${fileName}`
+            let genCode = `import * as wasmer from './build/${fileName}.js'
+                    let cppOpt = ${JSON.stringify(cppOpt)}
+                    export {cppOpt,wasmer}`
             callback(null, genCode)
         } else {
             // just back source in .cm.js file
-            let genCode = `let cmInfo = ${JSON.stringify(cppOpt)}
-            export default cmInfo`
+            let genCode = `let cppOpt = ${JSON.stringify(cppOpt)}
+            export {cppOpt}`
             callback(null, genCode)
         }
     }
