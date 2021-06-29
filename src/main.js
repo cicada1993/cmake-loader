@@ -1,13 +1,17 @@
-import { loadCppTest } from "./wasmer";
+import { cppOpt, wasmer, workerIns } from "../cpptest"
+if (wasmer) {
+    wasmer().then(
+        (wasm) => {
+            console.log('wasm', wasm)
+        }
+    )
+}
+if (workerIns) {
+    console.log('worker', workerIns)
+    workerIns.postMessage({ type: 'greet' })
+}
 
-loadCppTest().then(
-    (cppTest) => {
-        let { cppOpt, wasmer } = cppTest
-        console.log('cppOpt', cppOpt)
-        return wasmer()
-    }
-).then(
-    (wasm) => {
-        console.log('wasm', wasm)
-    }
-)
+const cppWorker = new Worker(new URL('./cppwk.js', import.meta.url));
+console.log('cppWorker', cppWorker)
+cppWorker.postMessage({ type: "greet" })
+

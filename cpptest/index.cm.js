@@ -1,5 +1,7 @@
 module.exports = {
     name: "cpptest",
-    favor: "wasm",
-    cache: true
+    favor: "wasm", 
+    asModule: true, 
+    asWorker: false,
+    cache: false
 }

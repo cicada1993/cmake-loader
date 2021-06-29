@@ -1,1 +1,1 @@
-D:\emsdk\upstream\emscripten\em++.bat -s WASM=1 -s ENVIRONMENT=web -s MODULARIZE=1 -s EXPORT_NAME=cpptest @CMakeFiles\cpptest.dir\objects1.rsp -o cpptest.js 
+D:\emsdk\upstream\emscripten\em++.bat -s WASM=1 -s ENVIRONMENT=web -s BUILD_AS_WORKER=0 -s MODULARIZE=1 -s EXPORT_NAME=cpptest @CMakeFiles\cpptest.dir\objects1.rsp -o cpptest.js 

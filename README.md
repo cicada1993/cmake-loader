@@ -1,8 +1,6 @@
 # cmake-loader
-整合基于cmake的c++项目和前端项目，支持webassembly开发，支持windows、linux
-
-- this is a tool for webpack
-- you can compile a wasm module from an cmake project with emscripten
+- a webpack loader for building cmake project
+- support building webassembly cmake project with emscripten on windows or linux
 
 ![image](https://user-images.githubusercontent.com/31173307/120924480-8af56000-c706-11eb-9116-fab18d01b909.png)
 
@@ -11,22 +9,34 @@
 - mingw gcc on windows / gcc on linux
 - cmake
 - emscripten
-## install
+## install loader
 ```
 npm install cmake-loader --save-dev
 ```
-## write a file end with .cm.js as following
+## write a .cm.js file in root dir of cmake project
 ```
 module.exports = {
     name: "cpptest",
-    favor: "wasm",
-    cache: true
+    favor: "wasm", 
+    asModule: true, 
+    asWorker: false,
+    cache: false
 }
 ```
-- name declare cmake project name
-- favor set cmake project output type
-- cache enable cache mode for building a wasm
-## webpack.config.js
+ - name —— name of wasm file or binder js must be same as productName in `add_executable(productName main.cpp)`
+ - favor —— type of cmake project two types for now: webassembly project、c project
+ - asModule —— binder js will export a function for loading wasm
+ - asWorker —— binder js will be a worker  
+ - cache —— building cmake project may take a while  enable it for building faster
+
+## best webassembly practice for .cm.js file
+- favor ——"wasm"
+- asModule ——true
+- asWorker ——false
+- cache ——true
+
+then you can use your wasm module in a common js file or a woker js like main.js and cppwk.js 
+## for webpack—— config webpack.config.js
 ```
 resolve: {
     extensions: ['.js', '.json', '.wasm', '.ts', '.cm.js'],
@@ -52,7 +62,10 @@ module: {
     ]
 },
 ```
-## vue.config.js
+- emsdk
+    - win32 set the emsdk path installed on windows
+    - linux set the emsdk path installed on linux
+## for vue-cli —— config vue.config.js
 ```
 lintOnSave: false, // avoid building failed
 configureWebpack: (config) => {
@@ -76,32 +89,20 @@ chainWebpack(config) {
     config.module.rule('js').exclude.add(/\.cm\.js$/); 
 }
 ```
-## errors about wasm
-if you use vue cli,wasm file may loaded failed,you can fix it as folowing in cpp_provider.js
+if you use vue cli,wasm file may loaded failed because of .wasm file and binder js are not in same dir,you can fixed it by passing a object with locatFile function to wasmer
 ```
-let cppTest
-
-async function loadCppTest() {
-    if (!cppTest) {
-        const cppTestESM = await import("../cpptest")
-        if (typeof cppTestESM.default == "function") {
-            cppTest = await cppTestESM.default({
-                locateFile:(path, scriptDirectory)=> {
-                    return path
-                }
-            })
-        } else {
-            cppTest = await cppTestESM.default
+import { cppOpt, wasmer, workerIns } from "../cpptest"
+if (wasmer) {
+    wasmer({locateFile:(path, scriptDirectory)=>path}).then(
+        (wasm) => {
+            console.log('cppwk wasm', wasm)
         }
-    }
-    return cppTest
-}
-
-export {
-    loadCppTest
+    )
+}else {
+    
 }
 ```
-as for why,you can find following code in cpptest.js
+you can trace this error by viewing binder js code,you will find that:
 ```
 function locateFile(path) {
   if (Module['locateFile']) {
